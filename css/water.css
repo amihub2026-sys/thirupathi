@@ -1,4 +1,849 @@
-.page-hero{min-height:76svh;display:flex;align-items:flex-end;position:relative;color:#fff;background:#062b45;overflow:hidden}.page-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.page-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,10,18,.82),rgba(1,10,18,.35) 55%,rgba(1,10,18,.10)),linear-gradient(0deg,rgba(1,10,18,.68),transparent 46%)}.page-hero-content{position:relative;z-index:2;padding:150px 0 66px;width:min(760px,100%)}.page-hero-content h1{margin:10px 0 16px}.page-hero-content p{max-width:600px;color:#d8ebf3;margin-bottom:0}.content-section{padding:88px 0}.section{padding:88px 0}.section-light{background:#f4fbfe}.section-dark{background:linear-gradient(145deg,#061c2c,#082e48);color:#fff}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature-card{border:1px solid #dceef6;border-radius:24px;background:rgba(255,255,255,.94);padding:28px;box-shadow:0 15px 45px rgba(0,42,67,.07)}.feature-card .num{display:inline-block;color:#0a8edb;font-size:.72rem;letter-spacing:.14em;font-weight:800;margin-bottom:24px}.feature-card h3{margin-bottom:10px}.feature-card p{color:#5c7484;margin-bottom:0}
-@media(max-width:900px){.page-hero{min-height:70svh}.page-hero-content{padding:128px 0 54px}.grid-3{grid-template-columns:1fr 1fr}.content-section,.section{padding:72px 0}}
-@media(max-width:600px){.page-hero{min-height:72svh;align-items:flex-end}.page-hero>img{object-position:center}.page-hero:after{background:linear-gradient(0deg,rgba(1,10,18,.88) 0,rgba(1,10,18,.52) 42%,rgba(1,10,18,.08) 76%)}.page-hero-content{padding:112px 0 42px}.page-hero-content h1{font-size:clamp(2.8rem,14vw,4.35rem);line-height:.95}.page-hero-content p{font-size:.96rem;line-height:1.58}.content-section,.section{padding:60px 0}.grid-3{grid-template-columns:1fr}.feature-card{padding:24px;border-radius:20px}}
-.water-split{display:grid;grid-template-columns:1.15fr .85fr;gap:58px;align-items:center}.water-features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.water-mini{padding:20px;border-radius:20px;background:#f5fbfe;border:1px solid #dceef6}.water-mini p{margin:7px 0 0;color:#5c7484}.product-image{padding:30px;border-radius:28px;background:radial-gradient(circle at 50% 35%,#e8faff,#fff 68%);box-shadow:var(--shadow)}.product-image img{width:100%}@media(max-width:900px){.water-split{grid-template-columns:1fr;gap:34px}.product-image{order:-1;max-width:660px;margin:auto}.water-features{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.water-features{grid-template-columns:1fr}.product-image{padding:18px;border-radius:22px}}
+/* =========================================================
+   THIRUPATHI AQUA — OUR WATER PAGE
+   Page-specific styles only
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.water-hero {
+  position: relative;
+  min-height: 78svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #031725;
+  color: #ffffff;
+}
+
+.water-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.01);
+}
+
+.water-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 12, 24, 0.88) 0%,
+      rgba(0, 21, 38, 0.67) 35%,
+      rgba(0, 28, 48, 0.22) 67%,
+      rgba(0, 15, 26, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 8, 17, 0.75) 0%,
+      transparent 52%
+    );
+}
+
+.water-hero-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 170px;
+  padding-bottom: 78px;
+  max-width: 720px;
+}
+
+.water-hero .eyebrow {
+  color: #54d9ff;
+}
+
+.water-hero h1 {
+  margin: 12px 0 20px;
+  max-width: 680px;
+
+  font-size: clamp(4rem, 7vw, 7.6rem);
+  line-height: 0.88;
+}
+
+.water-hero h1 em {
+  display: block;
+  color: #58d6ff;
+  font-style: normal;
+}
+
+.water-hero p {
+  max-width: 560px;
+  margin: 0;
+
+  color: rgba(235, 248, 255, 0.87);
+
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+
+/* SCROLL INDICATOR */
+
+.hero-scroll-indicator {
+  position: absolute;
+  right: 5%;
+  bottom: 48px;
+  z-index: 4;
+
+  width: 1px;
+  height: 75px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  overflow: hidden;
+}
+
+.hero-scroll-indicator span {
+  display: block;
+
+  width: 100%;
+  height: 32px;
+
+  background: #43d4ff;
+
+  animation: waterHeroScroll 2s ease-in-out infinite;
+}
+
+@keyframes waterHeroScroll {
+  0% {
+    transform: translateY(-34px);
+  }
+
+  60%,
+  100% {
+    transform: translateY(78px);
+  }
+}
+
+
+/* =========================================================
+   REFRESHMENT / WATER STORY
+========================================================= */
+
+.water-story {
+  position: relative;
+
+  width: 100%;
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #eefaff;
+}
+
+
+/* CINEMATIC BACKGROUND */
+
+.water-story-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Generated image has:
+    open area = left
+    bottle = right
+  */
+  object-position: 72% center;
+}
+
+
+/* LEFT-SIDE READABILITY */
+
+.water-story-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247, 253, 255, 0.99) 0%,
+      rgba(247, 253, 255, 0.97) 24%,
+      rgba(247, 253, 255, 0.87) 36%,
+      rgba(247, 253, 255, 0.53) 48%,
+      rgba(247, 253, 255, 0.18) 61%,
+      rgba(247, 253, 255, 0.02) 76%
+    );
+}
+
+
+/* OWN PAGE CONTAINER FIX */
+
+.water-story-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* LEFT CONTENT */
+
+.water-story-content {
+  width: 49%;
+  max-width: 610px;
+}
+
+
+.water-story .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #009fdc;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+
+.water-story h2 {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #061f32;
+
+  font-size: clamp(3.6rem, 5.2vw, 5.7rem);
+  line-height: 0.93;
+
+  letter-spacing: -0.045em;
+}
+
+
+.water-story h2 span {
+  display: block;
+
+  color: #079ed9;
+}
+
+
+.water-lead {
+  max-width: 580px;
+
+  margin: 26px 0 0;
+
+  color: #536f80;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.water-features {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+
+.water-feature {
+  min-width: 0;
+  min-height: 178px;
+
+  padding: 21px 18px;
+
+  border: 1px solid rgba(91, 191, 231, 0.28);
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.91),
+      rgba(242, 251, 255, 0.76)
+    );
+
+  box-shadow:
+    0 16px 45px rgba(0, 69, 104, 0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.water-feature:hover {
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 22px 50px rgba(0, 81, 121, 0.13);
+}
+
+
+.water-feature-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #078ed7,
+      #35c8f3
+    );
+
+  box-shadow:
+    0 8px 22px rgba(4, 159, 216, 0.22);
+}
+
+
+.water-feature-icon span {
+  color: #ffffff;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+
+.water-feature h3 {
+  margin: 0 0 8px;
+
+  color: #09243a;
+
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+
+.water-feature p {
+  margin: 0;
+
+  color: #587383;
+
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   HYDRATION SECTION
+========================================================= */
+
+.hydration-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 17% 50%,
+      rgba(29, 185, 235, 0.16),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #031725,
+      #062d47
+    );
+
+  color: #ffffff;
+}
+
+
+.hydration-layout {
+  display: grid;
+
+  grid-template-columns: 0.72fr 1.28fr;
+
+  gap: clamp(50px, 8vw, 120px);
+
+  align-items: center;
+}
+
+
+.hydration-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hydration-number span {
+  color: transparent;
+
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 800;
+
+  letter-spacing: -0.07em;
+
+  -webkit-text-stroke:
+    1px rgba(82, 216, 255, 0.36);
+
+  opacity: 0.75;
+}
+
+
+.hydration-copy {
+  max-width: 700px;
+}
+
+
+.hydration-copy .eyebrow {
+  color: #4bd8ff;
+}
+
+
+.hydration-copy h2 {
+  margin: 12px 0 22px;
+
+  color: #ffffff;
+
+  font-size: clamp(3.1rem, 5.5vw, 5.7rem);
+  line-height: 0.96;
+}
+
+
+.hydration-copy h2 em {
+  display: block;
+
+  color: #5ad9ff;
+
+  font-style: normal;
+}
+
+
+.hydration-copy p {
+  max-width: 610px;
+
+  color: #bbd2de;
+
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+
+.water-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.water-link span {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(89, 217, 255, 0.48);
+  border-radius: 50%;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.water-link:hover span {
+  background: #27c6f7;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .water-hero {
+    min-height: 72svh;
+  }
+
+  .water-hero-content {
+    padding-top: 145px;
+    padding-bottom: 60px;
+  }
+
+
+  /* WATER STORY */
+
+  .water-story {
+    min-height: 720px;
+  }
+
+  .water-story-container {
+    width: min(960px, calc(100% - 40px));
+  }
+
+  .water-story-content {
+    width: 54%;
+  }
+
+  .water-story-bg {
+    object-position: 67% center;
+  }
+
+  .water-story-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(247, 253, 255, 0.99) 0%,
+        rgba(247, 253, 255, 0.95) 31%,
+        rgba(247, 253, 255, 0.73) 48%,
+        rgba(247, 253, 255, 0.18) 67%,
+        transparent 82%
+      );
+  }
+
+  .water-story h2 {
+    font-size: clamp(3.3rem, 6vw, 4.8rem);
+  }
+
+
+  .water-features {
+    grid-template-columns: 1fr;
+
+    max-width: 440px;
+  }
+
+
+  .water-feature {
+    min-height: auto;
+
+    display: grid;
+    grid-template-columns: 42px 1fr;
+
+    gap: 14px;
+
+    align-items: start;
+
+    padding: 17px;
+  }
+
+
+  .water-feature-icon {
+    margin: 0;
+  }
+
+
+  /* HYDRATION */
+
+  .hydration-layout {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .hydration-number {
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .water-hero {
+    min-height: 78svh;
+  }
+
+  .water-hero-image {
+    object-position: 68% center;
+  }
+
+  .water-hero-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(0, 10, 20, 0.94) 0%,
+        rgba(0, 18, 34, 0.70) 48%,
+        rgba(0, 22, 37, 0.15) 78%
+      );
+  }
+
+  .water-hero-content {
+    padding-top: 130px;
+    padding-bottom: 46px;
+  }
+
+  .water-hero h1 {
+    font-size: clamp(3.2rem, 15vw, 4.9rem);
+
+    line-height: 0.91;
+  }
+
+  .water-hero p {
+    max-width: 92%;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+
+  /* -------------------------
+     WATER STORY
+  ------------------------- */
+
+  .water-story {
+    min-height: auto;
+
+    display: block;
+
+    /*
+      Image appears first.
+      Content begins below the bottle visual.
+    */
+    padding:
+      clamp(350px, 105vw, 455px)
+      0
+      64px;
+
+    background: #f3fbff;
+  }
+
+
+  .water-story-bg {
+    inset: 0 0 auto 0;
+
+    width: 100%;
+    height: 440px;
+
+    object-fit: cover;
+
+    /*
+      Keep bottle visible on mobile.
+    */
+    object-position: 69% center;
+  }
+
+
+  .water-story-overlay {
+    inset: 0 0 auto 0;
+
+    height: 455px;
+
+    background:
+      linear-gradient(
+        0deg,
+        #f3fbff 0%,
+        rgba(243, 251, 255, 0.98) 10%,
+        rgba(243, 251, 255, 0.72) 27%,
+        rgba(243, 251, 255, 0.18) 50%,
+        transparent 72%
+      );
+  }
+
+
+  .water-story-container {
+    width: calc(100% - 36px);
+  }
+
+
+  .water-story-content {
+    width: 100%;
+    max-width: none;
+  }
+
+
+  .water-story .eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .water-story h2 {
+    max-width: 100%;
+
+    font-size: clamp(3rem, 13vw, 4.35rem);
+    line-height: 0.94;
+
+    letter-spacing: -0.045em;
+  }
+
+
+  .water-lead {
+    margin-top: 20px;
+
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+
+  .water-features {
+    grid-template-columns: 1fr;
+
+    max-width: none;
+
+    gap: 11px;
+
+    margin-top: 26px;
+  }
+
+
+  .water-feature {
+    min-height: auto;
+
+    display: grid;
+    grid-template-columns: 42px 1fr;
+
+    gap: 14px;
+
+    align-items: start;
+
+    padding: 17px;
+
+    border-radius: 18px;
+  }
+
+
+  .water-feature-icon {
+    margin: 0;
+  }
+
+
+  .water-feature h3 {
+    font-size: 1rem;
+  }
+
+
+  .water-feature p {
+    font-size: 0.83rem;
+  }
+
+
+  /* -------------------------
+     HYDRATION
+  ------------------------- */
+
+  .hydration-section {
+    padding: 78px 0;
+  }
+
+
+  .hydration-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hydration-number span {
+    font-size: clamp(4rem, 24vw, 7rem);
+  }
+
+
+  .hydration-copy h2 {
+    font-size: clamp(2.9rem, 13vw, 4.2rem);
+  }
+
+
+  .hydration-copy p {
+    font-size: 0.94rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 390PX AND BELOW
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .water-hero h1 {
+    font-size: 3.1rem;
+  }
+
+
+  .water-story {
+    padding-top: 320px;
+    padding-bottom: 54px;
+  }
+
+
+  .water-story-bg {
+    height: 395px;
+
+    object-position: 68% center;
+  }
+
+
+  .water-story-overlay {
+    height: 405px;
+  }
+
+
+  .water-story-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .water-story h2 {
+    font-size: 2.8rem;
+  }
+
+
+  .water-feature {
+    padding: 16px;
+  }
+}
