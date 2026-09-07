@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>THIRUPATHI AQUA | Pure Water. Pure Life.</title>
+  <meta name="description" content="Experience THIRUPATHI AQUA through a cinematic journey from purity to bottling and everyday refreshment.">
+  <meta property="og:title" content="THIRUPATHI AQUA | Pure Water. Pure Life.">
+  <meta property="og:description" content="Pure water. Pure life. A cinematic journey of purity, production and refreshment.">
+  <meta name="theme-color" content="#020b12">
+  <link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home-page intro-active">
+  <!-- Opening cinematic title card. It plays automatically, then reveals the Home page. -->
+  <div class="opening-intro" id="openingIntro" aria-label="THIRUPATHI AQUA cinematic introduction">
+    <div class="opening-glow"></div>
+    <div class="opening-ring opening-ring-a"></div>
+    <div class="opening-ring opening-ring-b"></div>
+    <div class="opening-ring opening-ring-c"></div>
+    <div class="opening-content">
+      <img class="opening-logo" src="assets/logo/logo.png" alt="THIRUPATHI AQUA">
+      <span class="opening-line"></span>
+      <p>PURE WATER. PURE LIFE.</p>
+    </div>
+  </div>
+
+  <div data-header></div>
+
+  <main class="home-content">
+    <!-- One pinned cinematic scroll stage. Scroll drives the five videos. -->
+    <section class="cinema-story" id="cinema-story" aria-label="THIRUPATHI AQUA cinematic story">
+      <div class="cinema-sticky">
+        <div class="cinema-media" aria-hidden="true">
+          <video class="story-video is-visible" data-scene="0" muted playsinline preload="metadata" poster="assets/images/home/scene-01-poster.jpg">
+            <source src="assets/videos/scene-01.mp4" type="video/mp4">
+          </video>
+          <video class="story-video" data-scene="1" muted playsinline preload="metadata" poster="assets/images/home/scene-02-poster.jpg">
+            <source src="assets/videos/scene-02.mp4" type="video/mp4">
+          </video>
+          <video class="story-video" data-scene="2" muted playsinline preload="metadata" poster="assets/images/home/scene-03-poster.jpg">
+            <source src="assets/videos/scene-03.mp4" type="video/mp4">
+          </video>
+          <video class="story-video" data-scene="3" muted playsinline preload="metadata" poster="assets/images/home/scene-04-poster.jpg">
+            <source src="assets/videos/scene-04.mp4" type="video/mp4">
+          </video>
+          <video class="story-video" data-scene="4" muted playsinline preload="metadata" poster="assets/images/home/scene-05-poster.jpg">
+            <source src="assets/videos/scene-05.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="cinema-vignette"></div>
+
+        <div class="story-copy-wrap" aria-live="polite">
+          <article class="story-copy is-visible" data-copy="0">
+            <span class="story-kicker">THE BEGINNING</span>
+            <h1>It Starts<br>With a Drop.</h1>
+          </article>
+          <article class="story-copy" data-copy="1">
+            <span class="story-kicker">THE JOURNEY OF PURITY</span>
+            <h2>Every Drop<br>Matters.</h2>
+          </article>
+          <article class="story-copy" data-copy="2">
+            <span class="story-kicker">ADVANCED PURIFICATION</span>
+            <h2>Purity Meets<br>Precision.</h2>
+          </article>
+          <article class="story-copy" data-copy="3">
+            <span class="story-kicker">SEALED WITH CARE</span>
+            <h2>From Our Facility<br>to Your Hands.</h2>
+          </article>
+          <article class="story-copy story-copy-final" data-copy="4">
+            <img src="assets/logo/logo.png" alt="" class="story-final-logo">
+            <h2>Pure Water.<br>Pure Life.</h2>
+            <div class="story-actions">
+              <a class="btn" href="water.html">Explore Our Water</a>
+              <a class="btn btn-outline" href="contact.html">Contact Us</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="story-progress" aria-hidden="true">
+          <span class="story-progress-fill"></span>
+        </div>
+        <div class="story-counter" aria-hidden="true"><b>01</b><span>/ 05</span></div>
+
+        <button class="sound-control" id="soundControl" type="button" aria-label="Turn cinematic sound on" aria-pressed="false">
+          <span class="sound-control-icon" aria-hidden="true">🔇</span>
+          <span class="sound-control-text">Tap for Sound</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/cinematic.js"></script>
+</body>
+</html>
