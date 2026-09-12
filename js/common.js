@@ -65,7 +65,7 @@ if (footerMount) {
           <div class="footer-col"><h4>Explore</h4><a href="water.html">Our Water</a><a href="purification.html">Purification</a>
           <a href="gallery.html">Gallery</a>
           </div>
-          <div class="footer-col footer-contact"><h4>Contact</h4><p>+91 98765 43210<br>info@thirupathiaqua.com<br>Madurai, Tamil Nadu, India</p></div>
+          <div class="footer-col footer-contact"><h4>Contact</h4><p>9786257242<br>thirupathiwater1@gmail.com<br>Plot No. 4, Kalaivani Nagar, Kunnathur, Sivagangai Main Road, Madurai East Taluk, Madurai District – 625020.</p></div>
         </div>
         <div class="footer-bottom"><span>© 2026 THIRUPATHI AQUA. All Rights Reserved.</span><span>Designed & Developed by AMI HUB</span></div>
       </div>
